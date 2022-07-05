@@ -1,0 +1,63 @@
+<!docotype html>
+<html>
+<head>
+<title>calculator</title>
+<script>
+function compute()
+{
+var a,b,c,f;
+var operation=prompt("please insert operation (+,-,*,/,%)");
+a=document.getElementById("a").value;
+b=document.getElementById("b").value;
+c=document.getElementById("c").value;
+a=parseFloat(a);
+b=parseFloat(b);
+c=parseFloat(c);
+if (operation=="+")
+var f=a+b+c;
+else if (operation=="-")
+var f=a-b-c;
+else if (operation=="*")
+var f=a*b*c;
+else if (operation=="/")
+var f=a/b/c;
+else if (operation=="%")
+var f=a%b%c;
+else 
+var f="no operation";
+
+var m1="<p style='background-color:blue;color:white;font-size:200%;height:50px;text-align:left;border:5px double black'>A="+a+"</p>"
+var m2="<p style='background-color:blue;color:white;font-size:200%;height:50px;text-align:center;border:5px double black'>B="+b+"</p>"
+var m3="<p style='background-color:blue;color:white;font-size:200%;height:50px;text-align:right;border:5px double black'>C="+c+"</p>"
+var m4="<p style='background-color:blue;color:gold;font-size:350%;height:50px;text-align:center;border:5px double black'>F="+f+"</p>"
+document.getElementById("m1").innerHTML=m1;
+document.getElementById("m2").innerHTML=m2;
+document.getElementById("m3").innerHTML=m3;
+document.getElementById("m4").innerHTML=m4;
+}
+</script>
+<style>
+h1{
+color:red ;
+text-align:center;
+font-size:60px}
+
+
+</style>
+</head>
+<body>
+<form id="q">
+<h1 > simple calculator between 3 variables</h1>
+<fieldset>
+<legend>Expression</legend>
+Enter A:<input type=number id="a"><br>
+Enter B:<input type=number id="b"><br>
+Enter C:<input type=number id="c"><br>
+<input type="button" value="Compute" onclick="compute()">
+</fieldset>
+</form>
+<p id="m1"></p>
+<p id="m2"></p>
+<p id="m3"></p>
+<p id="m4"></p>
+</body>
